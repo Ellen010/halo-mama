@@ -1,70 +1,83 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Momo+Signature&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  --font-regular: "Regular";
+  --font-medium: "Medium";
+  --font-semibold: "SemiBold";
+  --font-bold: "Bold";
+  --color-primary: #d0e6eb;
+  --color-peach: #e0a299;
+  --color-beige: #e7cbae;
+  --color-pastel: #fefdf5;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-primary);
+  color: var(--color-peach);
+  font-family: var(--font-semibold);
+  padding: 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+.momo-signature-regular {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.titan-one-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.logo:hover {
+  filter: drop-shadow(1em 1em 1em #a1a2ad);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  a:hover {
-    color: #747bff;
+  to {
+    transform: rotate(360deg);
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.navbar-text {
+color: var(--color-peach);
+}
+.logo {
+  @apply h-35 w-35 rounded-[25%] transition-all duration-300 ease-in-out p-4 ml-20;
+}
+.title-hover-shadow {
+  transition: filter 0.3s ease;
+}
+
+.title-hover-shadow:hover {
+  filter: drop-shadow(2em 2em 2em #a1a2ad);
 }
