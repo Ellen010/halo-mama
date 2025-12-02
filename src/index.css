@@ -7,19 +7,18 @@
   --font-bold: "Bold";
   --color-primary: #d0e6eb;
   --color-peach: #e0a299;
+  --color-dpeach: #9e5b51;
   --color-beige: #e7cbae;
   --color-pastel: #fefdf5;
 
 }
 html {
   width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   width: 100vw;
-  overflow-x: hidden;
   background-color: var(--color-primary);
   color: var(--color-peach);
   font-family: var(--font-semibold);
@@ -77,4 +76,8 @@ color: var(--color-peach);
 
 .title-hover-shadow:hover {
   filter: drop-shadow(2em 2em 2em #a1a2ad);
+}
+
+.product {
+  @apply flex-center w-[20em] h-auto m-10;
 }
