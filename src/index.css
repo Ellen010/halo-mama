@@ -79,5 +79,5 @@ color: var(--color-peach);
 }
 
 .product {
-  @apply flex-center w-[20em] h-auto m-10;
+  @apply w-[20em] h-auto m-10;
 }
