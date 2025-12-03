@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  width: 80vw;
   background-color: var(--color-primary);
   color: var(--color-peach);
   font-family: var(--font-semibold);
@@ -26,6 +26,7 @@ body {
   text-align: center;
   margin: 0 auto;
 }
+
 .momo-signature-regular {
   font-family: "Momo Signature", cursive;
   font-weight: 400;
@@ -38,23 +39,18 @@ body {
   font-style: normal;
 }
 
-.logo:hover {
-  filter: drop-shadow(1em 1em 1em #a1a2ad);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeDown {
+  animation: fadeDown 0.3s ease both;
 }
 
 .card {
@@ -68,8 +64,25 @@ body {
 color: var(--color-peach);
 }
 .logo {
-  @apply h-35 w-35 rounded-[25%] transition-all duration-300 ease-in-out p-4 ml-20;
+  @apply rounded-[25%] transition-all duration-300 ease-in-out;
+  width: clamp(60px, 12vw, 180px);
+  height: auto;
 }
+
+.logo:hover {
+  filter: drop-shadow(1em 1em 1em #a1a2ad);
+  transform: scale(1.1);
+}
+
+.logo-spin {
+  animation: logo-spin infinite 20s linear;
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 .title-hover-shadow {
   transition: filter 0.3s ease;
 }
@@ -78,6 +91,9 @@ color: var(--color-peach);
   filter: drop-shadow(2em 2em 2em #a1a2ad);
 }
 
-.product {
-  @apply w-[20em] h-auto m-10;
+.product-one {
+  @apply w-full lg:w-1/2 object-cover;
+}
+.product-two {
+  @apply w-[30em] h-auto m-10 rounded-[3%];
 }
