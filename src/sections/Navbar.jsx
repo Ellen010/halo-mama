@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4 z-20">
                     <img src="/logo.png" alt="Halo-mama logo" className="logo" />
 
-                    <h1 className="momo-signature-regular absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[6vw] md:text-5xl lg:text-4xl xl:text-6xl 2xl:text-8xl text-[--color-primary] font-bold title-hover-shadow">
+                    <h1 className="momo-signature-regular absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[6vw] md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl text-[--color-primary] font-bold title-hover-shadow">
                         Halo-mama
                     </h1>
                 </div>

@@ -97,3 +97,55 @@ color: var(--color-peach);
 .product-two {
   @apply w-[30em] h-auto m-10 rounded-[3%];
 }
+
+/* Hero section */
+.container {
+  @apply mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 py-10;
+}
+
+.slide {
+  @apply absolute inset-0 opacity-0 z-0 transition-opacity duration-500;
+}
+
+.slide.active {
+  @apply opacity-100 z-10;
+}
+
+.slide__outer {
+  @apply absolute inset-0;
+}
+
+
+.slide__inner {
+  @apply absolute inset-0;
+}
+
+
+.slide img {
+  @apply w-full h-full object-cover;
+}
+
+
+.count {
+  @apply absolute top-4 right-4 text-white text-2xl font-bold;
+}
+
+
+.hero-wrapper {
+  @apply relative w-full overflow-hidden min-h-[400px];
+}
+
+
+.hero-text h1 {
+  @apply text-3xl mb-6 text-justify leading-relaxed;
+}
+.hero-text {
+  @apply w-full lg:w-1/2 text-xl text-justify leading-relaxed my-18;
+}
+
+
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    @apply w-full lg:w-1/2;
+  }
+}
