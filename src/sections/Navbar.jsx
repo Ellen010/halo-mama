@@ -11,18 +11,18 @@ const Navbar = () => {
             <nav className="relative flex items-center justify-between w-full px-6 md:px-12 py-4">
 
                 <div className="flex items-center gap-4 z-20">
-                    <img src="/logo.png" alt="Halo-mama logo" className="logo" />
+                    <img src="/images/logo.png" alt="Halo-mama logo" className="logo" />
 
-                    <h1 className="momo-signature-regular absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[6vw] md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl text-[--color-primary] font-bold title-hover-shadow">
+                    <h1 className="momo-signature-regular absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[6vw] md:text-base lg:text-lg xl:text-lg 2xl:text-5xl 3xl:text-6xl text-[--color-primary] font-bold title-hover-shadow">
                         Halo-mama
                     </h1>
                 </div>
-                <ul className="hidden md:flex items-center gap-10 momo-signature-regular z-20">
+                <ul className="hidden lg:flex items-center gap-10 momo-signature-regular z-20">
                     {navLinks.map((link) => (
                         <li key={link.label}>
                             <a
                                 href={link.href}
-                                className="text-[--color-primary] opacity-90 text-xl lg:text-3xl hover:text-[var(--color-dpeach)] hover:scale-110 transition-transform duration-300"
+                                className="text-[--color-primary] opacity-90 text-[3vw] md:text-sm lg:text-base xl:text-lg 2xl:text-2xl 3xl:text-2xl hover:text-[var(--color-dpeach)] hover:scale-110 transition-transform duration-300"
                             >
                                 {link.label}
                             </a>
@@ -31,7 +31,7 @@ const Navbar = () => {
                 </ul>
 
                 <button
-                    className="md:hidden text-[--color-dpeach] z-20"
+                    className="lg:hidden text-[--color-dpeach] z-20"
                     onClick={() => setOpen(!open)}
                 >
                     {open ? <X size={36} /> : <Menu size={36} />}

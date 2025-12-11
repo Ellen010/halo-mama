@@ -13,13 +13,14 @@ const Hero = () => {
 
 
     useEffect(() => {
+        requestAnimationFrame(() => {
         gsap.registerPlugin(Observer);
 
         const slides = slidesRef.current;
         const outers = outerRefs.current;
         const inners = innerRefs.current;
         const count = countRef.current;
-
+            if (!slides.length) return;
         let currentIndex = 0;
         let animating = false;
         const wrap = gsap.utils.wrap(0, slides.length);
@@ -29,33 +30,33 @@ const Hero = () => {
         gsap.set(outers[0], { xPercent: 0 });
         gsap.set(inners[0], { xPercent: 0 });
 
-        function gotoSection(index, direction) {
-            animating = true;
-            index = wrap(index);
+            function gotoSection(index, direction) {
+                animating = true;
+                index = wrap(index);
 
-            const tl = gsap.timeline({
-                defaults: { duration: 1, ease: "expo.inOut" },
-                onComplete: () => (animating = false)
-            });
+                const tl = gsap.timeline({
+                    defaults: { duration: 2.2, ease: "power2.out" },
+                    onComplete: () => (animating = false)
+                });
 
-            const currentSlide = slides[currentIndex];
-            const nextSlide = slides[index];
+                const currentSlide = slides[currentIndex];
+                const nextSlide = slides[index];
 
-            gsap.set(slides, { autoAlpha: 0, zIndex: 0 });
-            gsap.set([currentSlide, nextSlide], { autoAlpha: 1, zIndex: 1 });
+                gsap.set(slides, { autoAlpha: 0, zIndex: 0 });
+                gsap.set([currentSlide, nextSlide], { autoAlpha: 1, zIndex: 1 });
 
-            // ← Replace set with TextPlugin animation here
-            gsap.to(count, { duration: 0.3, text: index + 1 });
+                gsap.to(count, { duration: 1.2, text: index + 1, ease: "power1.out" });
 
-            tl.fromTo(outers[index], { xPercent: 100 * direction }, { xPercent: 0 }, 0)
-                .fromTo(inners[index], { xPercent: -100 * direction }, { xPercent: 0 }, 0);
+                tl.fromTo(outers[index], { xPercent: 100 * direction }, { xPercent: 0 }, 0)
+                    .fromTo(inners[index], { xPercent: -100 * direction }, { xPercent: 0 }, 0)
+                    .fromTo(nextSlide, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.5 }, 0);
 
-            currentIndex = index;
-        }
+                currentIndex = index;
+            }
 
-        Observer.create({
+
+            Observer.create({
             type: "wheel,touch,pointer",
-            preventDefault: true,
             wheelSpeed: -1,
             onUp: () => {
                 if (animating) return;
@@ -75,6 +76,7 @@ const Hero = () => {
         document.addEventListener("keydown", handleKey);
 
         return () => document.removeEventListener("keydown", handleKey);
+        });
     }, []);
 
     return (
@@ -85,10 +87,15 @@ const Hero = () => {
                     During her own pregnancy, our founder felt the deep need for a pillow that truly
                     supports a woman’s changing body...
                 </h1>
+                <h1>
+                    Our pregnancy pillow was carefully crafted to adapt to every stage of your journey. Its unique ergonomic shape provides targeted support for the belly, hips, back, and legs,
+                    helping relieve pressure and reduce tension as your body changes.
+                    Made from soft, breathable materials, it hugs your curves without ever feeling heavy or restrictive — giving you the comfort and stability you deserve, day and night.
+                </h1>
             </div>
 
-            <div className="w-full lg:w-1/2 relative overflow-hidden">
-                {images.map((img, i) => (
+            <div className="w-full lg:w-1/2 relative overflow-hidden min-h-[500px]">
+            {images.map((img, i) => (
                     <div
                         key={i}
                         className="slide"

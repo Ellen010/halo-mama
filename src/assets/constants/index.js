@@ -7,8 +7,8 @@ export const navLinks = [
 
 
 
-import img1 from '/product-one.png';
-import img2 from '/product-two.png';
-import img3 from '/product-three.png';
-
-export const images = [img1, img2, img3];
+export const images = [
+    "/images/product-one.png",
+    "/images/product-two.png",
+    "/images/product-three.png",
+];

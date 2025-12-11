@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  width: 80vw;
+  width: 90vw;
   background-color: var(--color-primary);
   color: var(--color-peach);
   font-family: var(--font-semibold);
@@ -104,25 +104,25 @@ color: var(--color-peach);
 }
 
 .slide {
-  @apply absolute inset-0 opacity-0 z-0 transition-opacity duration-500;
+  @apply absolute inset-0 opacity-0 z-0 transition-opacity duration-800 rounded-[3%];
 }
 
 .slide.active {
-  @apply opacity-100 z-10;
+  @apply opacity-100 z-10 rounded-[3%];
 }
 
 .slide__outer {
-  @apply absolute inset-0;
+  @apply absolute inset-0 rounded-[3%];
 }
 
 
 .slide__inner {
-  @apply absolute inset-0;
+  @apply absolute inset-0 rounded-[3%];
 }
 
 
 .slide img {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full object-cover rounded-[3%] m-auto;
 }
 
 
@@ -137,7 +137,7 @@ color: var(--color-peach);
 
 
 .hero-text h1 {
-  @apply text-3xl mb-6 text-justify leading-relaxed;
+  @apply text-[3vw] md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl  mb-5 mr-5 text-justify leading-relaxed;
 }
 .hero-text {
   @apply w-full lg:w-1/2 text-xl text-justify leading-relaxed my-18;
