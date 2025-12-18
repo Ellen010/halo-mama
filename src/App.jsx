@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './sections/Navbar.jsx';
 import Hero from './sections/Hero.jsx';
+import Product from './sections/Product.jsx';
 import './index.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
         <>
             <Navbar />
             <Hero/>
+            <Product/>
         <p className="navbar-text">
             All rights reserved to Halo-mama ©.
         </p>
