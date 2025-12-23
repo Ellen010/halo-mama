@@ -1,7 +1,15 @@
 import React, {useEffect, useRef} from 'react'
 import {samples} from "../assets/constants/index.js";
 import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
 import { TextPlugin, Observer } from "gsap/all";
+const GsapTo = () => {
+    useGSAP(() => {
+        gsap.to ("#product-desc", {
+            duration: 1000,
+            yoyo: true,
+        })
+},[]);
 
 gsap.registerPlugin(TextPlugin, Observer);
 const Product = () => {
@@ -99,7 +107,7 @@ const Product = () => {
                     1
                 </div>
             </div>
-            <div className="hero-text">
+            <div className="hero-text" id="product-desc">
                 <h1>
                     Discover a new standard of comfort designed with real pregnancy needs in mind.
                     Born from a mom-to-be’s personal experience,
@@ -120,4 +128,4 @@ const Product = () => {
     );
 };
 
-export default Product
+export default Product;
