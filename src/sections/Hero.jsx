@@ -14,8 +14,9 @@ const Hero = () => {
 
 
     useGSAP(() => {
+        const maxX = window.innerWidth
         gsap.to("#flower", {
-            x: 1800,
+            x: maxX,
             rotation: 360,
             repeat: -1,
             duration: 40,
