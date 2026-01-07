@@ -10,12 +10,15 @@ const App = () => {
             <Navbar />
             <Hero/>
             <Product/>
-        <p className="navbar-text">
+
+            <div className="navbar-shadow">
+        <p className="navbar-text shadow-top">
             All rights reserved to Halo-mama ©.
         </p>
     <p className="navbar-text">
         Website created by Yvelines Technologies.
     </p>
+            </div>
         </>
     )
 }

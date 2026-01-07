@@ -149,3 +149,11 @@ color: var(--color-peach);
     @apply w-full lg:w-1/2;
   }
 }
+
+
+/*page bottom*/
+
+.navbar-shadow {
+  box-shadow: 0 -2px 5px #e0a299;
+  padding-top: 10px;
+}
