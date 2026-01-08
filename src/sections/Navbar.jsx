@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li key={link.label}>
                             <a
                                 href={link.href}
-                                className="text-[--color-primary] opacity-90 text-[3vw] md:text-sm lg:text-base xl:text-lg 2xl:text-2xl 3xl:text-2xl hover:text-[var(--color-dpeach)] hover:scale-110 transition-transform duration-300"
+                                className="menu"
                             >
                                 {link.label}
                             </a>

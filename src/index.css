@@ -60,6 +60,8 @@ body {
 .read-the-docs {
   color: #888;
 }
+/*Navbar*/
+
 .navbar-text {
 color: var(--color-peach);
 }
@@ -89,6 +91,52 @@ color: var(--color-peach);
 
 .title-hover-shadow:hover {
   filter: drop-shadow(2em 2em 2em #a1a2ad);
+}
+
+.menu {
+  display: inline-block;
+  color: var(--color-peach);
+  opacity: 0.9;
+  font-size: 3vw;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .menu{
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .menu {
+    font-size: 1.5rem;
+  }
+}
+.menu:hover {
+  filter: drop-shadow(0px 2px 9px #a1a2ad);
+  transform: scale(1.2);
+}
+.text-shadowed:hover {
+  color: var(--color-dpeach);
+  transform: scale(1.10);
 }
 
 .product-one {
@@ -154,6 +202,6 @@ color: var(--color-peach);
 /*page bottom*/
 
 .navbar-shadow {
-  box-shadow: 0 -2px 5px #e0a299;
+  box-shadow: 3px -2px 5px #e0a299;
   padding-top: 10px;
 }
