@@ -17,13 +17,10 @@ const Navbar = () => {
                         Halo-mama
                     </h1>
                 </div>
-                <ul className="hidden lg:flex items-center gap-10 momo-signature-regular z-20">
+                <ul className="hidden xl:flex items-center gap-10 momo-signature-regular z-20">
                     {navLinks.map((link) => (
                         <li key={link.label}>
-                            <a
-                                href={link.href}
-                                className="menu"
-                            >
+                            <a href={link.href} className="menu">
                                 {link.label}
                             </a>
                         </li>
@@ -31,11 +28,12 @@ const Navbar = () => {
                 </ul>
 
                 <button
-                    className="lg:hidden text-[--color-dpeach] z-20"
+                    className="xl:hidden text-[--color-dpeach] z-20"
                     onClick={() => setOpen(!open)}
                 >
                     {open ? <X size={36} /> : <Menu size={36} />}
                 </button>
+
             </nav>
 
             {open && (

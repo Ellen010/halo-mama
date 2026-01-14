@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-regular: "Regular";
-  --font-medium: "Medium";
-  --font-semibold: "SemiBold";
-  --font-bold: "Bold";
   --color-primary: #d0e6eb;
   --color-peach: #e0a299;
   --color-dpeach: #9e5b51;

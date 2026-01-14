@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './sections/Navbar.jsx';
 import Hero from './sections/Hero.jsx';
 import Product from './sections/Product.jsx';
+import Contact from './sections/Contact.jsx';
 import './index.css';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <Navbar />
             <Hero/>
             <Product/>
+            <Contact/>
 
             <div className="navbar-shadow">
         <p className="navbar-text shadow-top">
