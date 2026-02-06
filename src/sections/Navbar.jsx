@@ -33,7 +33,6 @@ const Navbar = () => {
                 >
                     {open ? <X size={36} /> : <Menu size={36} />}
                 </button>
-
             </nav>
 
             {open && (
