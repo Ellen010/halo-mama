@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-regular: "Regular";
-  --font-medium: "Medium";
-  --font-semibold: "SemiBold";
-  --font-bold: "Bold";
   --color-primary: #d0e6eb;
   --color-peach: #e0a299;
   --color-dpeach: #9e5b51;
@@ -60,21 +56,14 @@ body {
 .read-the-docs {
   color: #888;
 }
+
 /*Navbar*/
 
 .navbar-text {
 color: var(--color-peach);
 }
-.logo {
-  @apply rounded-[25%] transition-all duration-300 ease-in-out;
-  width: clamp(60px, 12vw, 180px);
-  height: auto;
-}
 
-.logo:hover {
-  filter: drop-shadow(1em 1em 1em #a1a2ad);
-  transform: scale(1.1);
-}
+
 
 .logo-spin {
   animation: logo-spin infinite 20s linear;
