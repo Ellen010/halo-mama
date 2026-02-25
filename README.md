@@ -1,53 +1,74 @@
-# Halo Mama — Web Platform (Work in Progress)
+# Halo Mama — E-commerce Platform (Work in Progress)
 
-Halo Mama is a custom web platform currently under active development for a **private client**.  
-The project is being built with a modern React-based stack and focuses on performance, scalability, and a smooth user experience.
+Halo Mama is a **product-selling web platform** currently under active development for a **private client**.  
+The platform is dedicated to selling a **unique, personalized pillow designed specifically for pregnant women**, focusing on comfort, ergonomics, and emotional well-being during pregnancy.
 
 🚧 **Status:** In development  
 🌐 **Live preview:** https://halo-mama.vercel.app/
 
 ---
 
-## 🧩 Project Overview
+## 🧸 Product Overview
 
-This application is designed as a production-ready web platform, developed incrementally with continuous improvements to UI, functionality, and performance.  
-The live version reflects the **current development state** and may change frequently as new features are added.
+Halo Mama offers a **custom-designed maternity pillow**, created to support pregnant women throughout different stages of pregnancy.  
+The platform is built to highlight product value, personalization, and a smooth purchasing experience.
+
+Key product goals:
+- Emphasize comfort and physical support for pregnant women
+- Present the product as a premium, caring solution
+- Enable clear product storytelling and conversion-focused design
+
+---
+
+## 🧩 Platform Overview
+
+The website is designed as a **modern e-commerce storefront**, with a strong focus on:
+- Clean and reassuring UI
+- Smooth animations to enhance user trust
+- Mobile-first and responsive design
+- Scalable architecture for future checkout and payment integrations
+
+The live version reflects the **current development state** and may change frequently as features are added.
+
+---
+
+## 🖼️ Screenshots
+
+### Brand & Product Identity
+<img width="1024" height="1536" alt="Halo Mama Logo" src="https://github.com/user-attachments/assets/718c532e-dcbd-4c24-a831-e75131874499" />
+
+### Product Presentation
+<img width="1024" height="1536" alt="Halo Mama Pillow Product" src="https://github.com/user-attachments/assets/026928ba-b775-404b-8199-bd83661a22e0" />
+
+### Website Interface
+<img width="3751" height="1672" alt="Halo Mama Website UI" src="https://github.com/user-attachments/assets/4e2ec648-7eb7-4559-9a37-5726c26dd6ae" />
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React** — Component-based UI development
-- **Vite** — Fast development server and optimized production builds
-- **TypeScript** — Type safety and long-term maintainability
+- **React 19** — Component-based UI development
+- **Vite** — Fast development server and optimized builds
+- **Tailwind CSS** — Utility-first styling and responsive layouts
+- **GSAP** — Animations and visual transitions
+- **React Router** — Client-side routing
+- **Lucide Icons** — Clean and modern iconography
 - **ESLint** — Code quality and consistency
-- **HMR (Hot Module Replacement)** — Instant feedback during development
 
 ---
 
 ## ⚙️ Tooling & Configuration
 
-The project uses the official Vite React setup with:
-
-- Fast Refresh for an efficient developer experience
-- ESLint configured for modern React workflows
-- Modular architecture to support future feature expansion
-
-> The React Compiler is currently **not enabled** due to its potential impact on development and build performance.  
-> It may be evaluated and introduced later if beneficial for production optimization.
+- Hot Module Replacement (HMR) for fast iteration
+- Modular component structure for scalability
+- Performance-focused build configuration
+- Prepared for future e-commerce features (checkout, payments, analytics)
 
 ---
 
-## 🚀 Development Notes
+## 🚀 Local Development
 
-- This repository represents an **ongoing private client project**
-- Features, structure, and visuals are subject to change
-- Not all planned functionality is available in the live version yet
-
----
-
-## 📦 Local Development
+Install dependencies:
 
 ```bash
 npm install
-npm run dev
